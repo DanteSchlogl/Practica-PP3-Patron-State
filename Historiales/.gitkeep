@@ -1,0 +1,8 @@
+El programa escribe acá el historial de cada pedido.
+
+Un archivo por pedido, con este nombre:
+
+    historial_pedido_1.txt
+    historial_pedido_2.txt
+
+Los .txt no se versionan (ver .gitignore) porque son resultado de la ejecución.

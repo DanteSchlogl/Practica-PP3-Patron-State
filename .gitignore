@@ -1,0 +1,18 @@
+# Archivos generados por la compilación
+bin/
+obj/
+
+# Configuración local de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Resultado de la ejecución: el historial se genera en tiempo de ejecución
+Historiales/*.txt
+
+# Archivos del sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
