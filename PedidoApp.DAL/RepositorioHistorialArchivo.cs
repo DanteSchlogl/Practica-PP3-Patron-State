@@ -10,7 +10,6 @@ public class RepositorioHistorialArchivo : IRepositorioHistorial
     private readonly IFormateadorHistorial _formateador;
 
     // Para que dos escrituras al mismo tiempo no rompan el archivo.
-    private readonly object _candado = new object();
 
     public RepositorioHistorialArchivo(string carpeta, IFormateadorHistorial formateador)
     {
@@ -52,11 +51,8 @@ public class RepositorioHistorialArchivo : IRepositorioHistorial
 
         try
         {
-            lock (_candado)
-            {
-                Directory.CreateDirectory(Carpeta);  // la creo si no existe
-                File.AppendAllText(ruta, linea);     // agrego al final, no piso lo anterior
-            }
+            Directory.CreateDirectory(Carpeta);  // la creo si no existe
+            File.AppendAllText(ruta, linea);     // agrego al final, no piso lo anterior
 
             EventosRegistrados++;
         }
